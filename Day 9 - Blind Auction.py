@@ -1,4 +1,3 @@
-#HINT: You can call clear() to clear the output in the console.
 from replit import clear
 import blindauction_art as art
 
@@ -19,4 +18,3 @@ while not auction_end:
     auction_end = True
     maximum = max(auction, key=auction.get)
     print("The winner is " + maximum + " with a bid of $" + auction[maximum])
-
