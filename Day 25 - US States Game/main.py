@@ -30,5 +30,6 @@ while len(correct_guess) < 50:
 
 # Exporting remaining states to CSV
 states_remainder = set(state_list) - set(correct_guess)
+states_remainder = [state for state in state_list if state not in correct_guess]
 remaining_states = pd.DataFrame(sorted(states_remainder))
 remaining_states.to_csv("states_to_learn.csv")
