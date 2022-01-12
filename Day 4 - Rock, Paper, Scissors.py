@@ -28,7 +28,9 @@ scissors = '''
 
 user_choice = int(input("What do you choose? Type 0 for Rock, 1 for Paper or 2 for Scissors.\n"))
 comp_choice = random.randint(0, 2)
-if (comp_choice == 0):
+if (user_choice >= 3 or user_choice < 0):
+    print("Invalid number. You lose!")
+elif (comp_choice == 0):
   if(user_choice == 1):
     print("Computer chose: \n" + rock)
     print("You chose: \n" + paper)
